@@ -1,0 +1,115 @@
+/* src/styles/Custom.css */
+
+/* --- Default Dark Mode Variables --- */
+:root {
+  --primary-color: #0f3460; /* Dark Blue */
+  --secondary-color: #e94560; /* Accent Red */
+  --bg-dark-start: #1a1a2e;
+  --bg-dark-end: #16213e;
+  --text-light: #ffffff;
+  --text-muted: #a0a0a0;
+  --card-bg: #1e77d6;
+  
+  /* Bootstrap Overrides (Ensure these are loaded after Bootstrap) */
+  --bs-body-bg: var(--bg-dark-start);
+  --bs-body-color: var(--text-light);
+  --bs-primary: var(--primary-color);
+  --bs-secondary: var(--secondary-color);
+}
+
+/* --- Light Mode Variables --- */
+.light-mode {
+  --primary-color: #0d6efd; 
+  --secondary-color: #dc3545; 
+  --bg-dark-start: #f8f9fa;
+  --bg-dark-end: #ffffff;
+  --text-light: #2c333a;
+  --text-muted: #3d4a55;
+  --card-bg: #1d1b1b;
+
+  --bs-body-bg: var(--bg-dark-start);
+  --bs-body-color: var(--text-light);
+  --bs-primary: var(--primary-color);
+  --bs-secondary: var(--secondary-color);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-dark-start), var(--bg-dark-end));
+}
+
+/* --- Navbar Customization --- */
+.navbar-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(26, 26, 46, 0.8) !important;
+}
+.light-mode .navbar-custom {
+     background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Custom Hamburger Slide-in for Mobile */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 56px; /* Below fixed nav */
+    left: 0;
+    width: 70%; /* Slide-in width */
+    height: 100vh;
+    background: var(--bg-dark-start);
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    padding: 20px;
+    border-right: 2px solid var(--secondary-color);
+  }
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+  .navbar-nav .nav-link {
+      padding: 10px 0;
+  }
+}
+
+/* --- Project Grid (Masonry effect using custom classes for staggered heights) --- */
+/* Simple approach for masonry columns */
+@media (min-width: 768px) {
+    .masonry-col {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 1.5rem;
+        -webkit-column-gap: 1.5rem;
+        column-gap: 1.5rem;
+    }
+    .masonry-col > * {
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+}
+@media (min-width: 992px) {
+    .masonry-col {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+/* --- Hover Effects --- */
+.project-card, .skill-card {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.project-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4); /* Glow effect */
+}
+.skill-card:hover {
+  box-shadow: 0 0 10px var(--secondary-color);
+}
