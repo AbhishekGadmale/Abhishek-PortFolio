@@ -9,7 +9,7 @@
   --text-light: #ffffff;
   --text-muted: #a0a0a0;
   --card-bg: #0f355d;
-  
+
   /* Bootstrap Overrides (Ensure these are loaded after Bootstrap) */
   --bs-body-bg: var(--bg-dark-start);
   --bs-body-color: var(--text-light);
@@ -17,15 +17,18 @@
   --bs-secondary: var(--secondary-color);
 }
 
-/* --- Light Mode Variables --- */
+/* --- Light Mode Variables (Aesthetically Corrected) --- */
 .light-mode {
   --primary-color: #0d6efd; 
   --secondary-color: #dc3545; 
-  --bg-dark-start: #f8f9fa;
-  --bg-dark-end: #ffffff;
-  --text-light: #2c333a;
-  --text-muted: #39424b;
-  --card-bg: #1d1b1b;
+  --bg-dark-start: #f8f9fa; /* Very Light Gray (Good for body gradient start) */
+  --bg-dark-end: #817777;  /* Pure White (Good for body background) */
+  --text-light: #000000;   /* Dark Gray (Primary text color) */
+  /* Using a readable dark gray for muted text in light mode */
+  --bs-body-bg: #97a1ab;
+  --text-muted: #6c757d;   
+  /* FIX 2: Change card background to a light color for a clean aesthetic */
+  --card-bg: #e6eaee;     /* Very Light Blue/Gray (Subtle distinction from body) */
 
   --bs-body-bg: var(--bg-dark-start);
   --bs-body-color: var(--text-light);
@@ -38,20 +41,46 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+
+}
+
+/* FIX: GLOBAL TEXT ENFORCEMENT - Ensure ALL common text and link elements use the variable color */
+p, h1, h2, h3, h4, h5, h6, a, div {
+    color: var(--text-light) !important;
+}
+/* FIX: Enforce color for everything inside the Hero section (covers "Building Modern Web Experiences" and "Hello, I'm...") */
+.hero-section * {
+    color: var(--text-light) !important;
+}
+
+
+/* FIX: High priority rules for specific elements that were invisible */
+.text-muted {
+    color: var(--text-muted) !important; /* Ensures testimonial source text is visible */
+}
+label {
+    color: var(--text-light) !important; /* Ensures form labels (Name, Email) are visible */
 }
 
 /* --- Hero Section Styling --- */
 .hero-section {
-    background: linear-gradient(135deg, var(--bg-dark-start), var(--bg-dark-end));
+  background: linear-gradient(135deg, var(--bg-dark-start), var(--bg-dark-end));
 }
 
 /* --- Navbar Customization --- */
 .navbar-custom {
-    backdrop-filter: blur(5px);
-    background-color: rgba(26, 26, 46, 0.8) !important;
+  backdrop-filter: blur(5px);
+  background-color: rgba(26, 26, 46, 0.8) !important;
 }
 .light-mode .navbar-custom {
-     background-color: rgba(255, 255, 255, 0.9) !important;
+  /* Retaining this, slight transparency looks good in light mode */
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* FIX: Ensure Nav links AND the Brand Name use the primary text color */
+.navbar-nav .nav-link,
+.navbar-brand {
+    color: var(--text-light) !important;
 }
 
 /* Custom Hamburger Slide-in for Mobile */
@@ -62,7 +91,8 @@ body {
     left: 0;
     width: 70%; /* Slide-in width */
     height: 100vh;
-    background: var(--bg-dark-start);
+    /* Uses bg-dark-start, which is fine, but text inside must be visible */
+    background: var(--bg-dark-start); 
     z-index: 1050;
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
@@ -73,46 +103,89 @@ body {
     transform: translateX(0);
   }
   .navbar-nav .nav-link {
-      padding: 10px 0;
+    padding: 10px 0;
   }
 }
 
 /* --- Project Grid (Masonry effect using custom classes for staggered heights) --- */
 /* Simple approach for masonry columns */
 @media (min-width: 768px) {
-    .masonry-col {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-        -moz-column-gap: 1.5rem;
-        -webkit-column-gap: 1.5rem;
-        column-gap: 1.5rem;
-    }
-    .masonry-col > * {
-        break-inside: avoid;
-        margin-bottom: 1.5rem;
-    }
+  .masonry-col {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 1.5rem;
+    -webkit-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+  .masonry-col > * {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
 }
 @media (min-width: 992px) {
-    .masonry-col {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
+  .masonry-col {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
 }
 
 /* --- Hover Effects --- */
 .project-card, .skill-card {
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
+  /* Use the card background variable for all card elements */
+  background-color: var(--card-bg); 
+  /* FIX: Ensure text inside cards contrasts with card background */
+  color: var(--text-light); 
 }
+
+/* FIX: Ensure text elements inside the card (including timeline/testimonial text) use the variable */
+.project-card *, .skill-card *,
+.testimonial-block *,
+.timeline-item * {
+    color: inherit !important; /* FORCED INHERITANCE: Ensures all children text elements (timeline, testimonials) inherit the dark color from the parent card */
+}
+
 .project-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4); /* Glow effect */
+  /* Default Dark Mode Glow (Strong Accent Red) */
+  box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4); 
 }
 .skill-card:hover {
   box-shadow: 0 0 10px var(--secondary-color);
 }
-.text-muted{
-  color: white !important;
+
+/* FIX 3: Add Light Mode specific override for a softer hover shadow */
+.light-mode .project-card:hover {
+  /* Use a subtle, dark shadow instead of a bright glow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+}
+.light-mode .skill-card:hover {
+  /* Use a softer shadow for the skill cards too */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- NEW FIX: Social Icon Visibility in Light Mode --- */
+.social-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Standard circular social icon shape */
+    border: 2px solid transparent; /* Default transparent border in dark mode */
+    transition: all 0.3s ease-in-out;
+}
+
+.light-mode .social-icon-wrapper {
+    /* In light mode, add a dark border for contrast against white background */
+    border-color: var(--text-light);
+}
+
+/* Ensure the icon inside is also dark in light mode */
+.social-icon-wrapper i,
+.social-icon-wrapper svg {
+    color: var(--text-light) !important;
 }

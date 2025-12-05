@@ -23,15 +23,15 @@ const projectsData = [
   },
   { 
     id: 2, 
-    title: 'Rural E-commerce Store', 
-    tech: ['React', 'Node.js', 'MongoDB', 'Razorpay'], 
-    desc: 'Full-stack application designed for slow rural networks with caching and PWA features.', 
+    title: 'Attendance System Using Facial Recognition', 
+    tech: ['Python', 'OpenCV–Face detection', 'Flask', 'face_recognition'], 
+    desc: 'It uses real-time facial recognition to automatically mark attendance.', 
     metrics: '30% faster load time, 500+ users monthly',
-    image: '/placeholder-images/project-ecommerce.jpg',
+    image: '/Attendance System.png',
     challenge: 'Optimizing product pages for low bandwidth and inconsistent connectivity.',
     solution: 'Used image placeholders (blur-up), server-side rendering (SSR), and minimal CSS bundles.',
     results: 'Significant reduction in bounce rate for mobile users.',
-    code:''
+    code:'https://github.com/AbhishekGadmale/Final-Year-Project-.git'
   },
   { 
     id: 3, 
@@ -63,11 +63,11 @@ const projectsData = [
     tech: ['React', 'Axios', 'OpenWeatherMap API'], 
     desc: 'Location-based weather application featuring daily and five-day forecasts.', 
     metrics: 'Fast API response, modern animated icons',
-    image: '/placeholder-images/project-weather.jpg',
+    image: '/Weather Api.PNG',
     challenge: 'Handling asynchronous data fetching and error states gracefully.',
     solution: 'Used `useEffect` cleanup function and robust error boundaries.',
     results: 'Reliable data display under varying network conditions.',
-    code:''
+    code:'https://github.com/AbhishekGadmale/Weather-App.git'
   },
   { 
     id: 6, 
