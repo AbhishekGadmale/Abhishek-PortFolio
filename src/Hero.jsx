@@ -74,7 +74,7 @@ const Hero = ({ name }) => {
               <Button 
                 variant="outline-light" 
                 size="lg" 
-                href="Images/JobApplication.pdf" 
+                href="public/JobApplication.pdf" 
                 download
                 className="shadow-lg"
               >

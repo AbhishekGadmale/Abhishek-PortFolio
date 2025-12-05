@@ -15,10 +15,11 @@ const projectsData = [
     tech: ['React', 'Bootstrap', 'Framer Motion'], 
     desc: 'The site you are viewing. Built for speed and accessibility (Lighthouse > 90).', 
     metrics: '95+ Lighthouse Score, fully responsive',
-    image: '/placeholder-images/project-portfolio.jpg',
+    image: 'public/PortFolio.PNG',
     challenge: 'Achieving high Lighthouse scores with heavy animations.',
     solution: 'Implemented lazy loading, image optimization, and Framer Motion view-based rendering.',
-    results: 'Sub 1.5s load time on 3G simulation.'
+    results: 'Sub 1.5s load time on 3G simulation.',
+    code:'https://github.com/AbhishekGadmale/Abhishek-PortFolio.git'
   },
   { 
     id: 2, 
@@ -29,7 +30,8 @@ const projectsData = [
     image: '/placeholder-images/project-ecommerce.jpg',
     challenge: 'Optimizing product pages for low bandwidth and inconsistent connectivity.',
     solution: 'Used image placeholders (blur-up), server-side rendering (SSR), and minimal CSS bundles.',
-    results: 'Significant reduction in bounce rate for mobile users.'
+    results: 'Significant reduction in bounce rate for mobile users.',
+    code:''
   },
   { 
     id: 3, 
@@ -40,7 +42,8 @@ const projectsData = [
     image: '/placeholder-images/project-youtube.jpg',
     challenge: 'Handling complex API authentication and large datasets for charting.',
     solution: 'Implemented OAuth flow and optimized data fetching with memoization.',
-    results: 'Improved content strategy clarity.'
+    results: 'Improved content strategy clarity.',
+    code:''
   },
   { 
     id: 4, 
@@ -51,7 +54,8 @@ const projectsData = [
     image: '/placeholder-images/project-task.jpg',
     challenge: 'Maintaining global state consistency across components without prop drilling.',
     solution: 'Utilized Redux Toolkit for centralized state management.',
-    results: 'Robust state handling, excellent user feedback.'
+    results: 'Robust state handling, excellent user feedback.',
+    code:''
   },
   { 
     id: 5, 
@@ -62,7 +66,8 @@ const projectsData = [
     image: '/placeholder-images/project-weather.jpg',
     challenge: 'Handling asynchronous data fetching and error states gracefully.',
     solution: 'Used `useEffect` cleanup function and robust error boundaries.',
-    results: 'Reliable data display under varying network conditions.'
+    results: 'Reliable data display under varying network conditions.',
+    code:''
   },
   { 
     id: 6, 
@@ -73,7 +78,8 @@ const projectsData = [
     image: '/placeholder-images/project-blog.jpg',
     challenge: 'Integrating Markdown rendering with static site generation for performance.',
     solution: 'Used `gray-matter` and `remark` libraries within Next.js SSG functions.',
-    results: 'Incredible SEO scores and rapid page loading.'
+    results: 'Incredible SEO scores and rapid page loading.',
+    code:''
   },
 ];
 
@@ -99,7 +105,7 @@ const ProjectCard = ({ project }) => {
           <Card.Text className="text-muted">{project.desc}</Card.Text>
           <p className="small text-light mt-auto">Metrics: {project.metrics}</p>
           <div className="d-flex justify-content-between mt-3">
-            <Button variant="outline-primary" size="sm" href="#">
+            <Button variant="outline-primary" size="sm" href={project.code}>
               <FaGithub className="me-1" /> Code
             </Button>
             <Button variant="outline-secondary" size="sm" href="#">

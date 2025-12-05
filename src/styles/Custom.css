@@ -8,7 +8,7 @@
   --bg-dark-end: #16213e;
   --text-light: #ffffff;
   --text-muted: #a0a0a0;
-  --card-bg: #1e77d6;
+  --card-bg: #0f355d;
   
   /* Bootstrap Overrides (Ensure these are loaded after Bootstrap) */
   --bs-body-bg: var(--bg-dark-start);
@@ -24,7 +24,7 @@
   --bg-dark-start: #f8f9fa;
   --bg-dark-end: #ffffff;
   --text-light: #2c333a;
-  --text-muted: #3d4a55;
+  --text-muted: #39424b;
   --card-bg: #1d1b1b;
 
   --bs-body-bg: var(--bg-dark-start);
@@ -112,4 +112,7 @@ body {
 }
 .skill-card:hover {
   box-shadow: 0 0 10px var(--secondary-color);
+}
+.text-muted{
+  color: white !important;
 }
