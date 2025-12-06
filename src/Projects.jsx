@@ -19,7 +19,8 @@ const projectsData = [
     challenge: 'Achieving high Lighthouse scores with heavy animations.',
     solution: 'Implemented lazy loading, image optimization, and Framer Motion view-based rendering.',
     results: 'Sub 1.5s load time on 3G simulation.',
-    code:'https://github.com/AbhishekGadmale/Abhishek-PortFolio.git'
+    code:'https://github.com/AbhishekGadmale/Abhishek-PortFolio.git',
+    link:'https://explore-world-3.onrender.com/about'
   },
   { 
     id: 2, 
@@ -31,55 +32,60 @@ const projectsData = [
     challenge: 'Optimizing product pages for low bandwidth and inconsistent connectivity.',
     solution: 'Used image placeholders (blur-up), server-side rendering (SSR), and minimal CSS bundles.',
     results: 'Significant reduction in bounce rate for mobile users.',
-    code:'https://github.com/AbhishekGadmale/Final-Year-Project-.git'
+    code:'https://github.com/AbhishekGadmale/Final-Year-Project-.git',
+     link:''
   },
   { 
     id: 3, 
-    title: 'YouTube Analytics Dashboard', 
-    tech: ['React', 'Recharts', 'Express API'], 
-    desc: 'Visual tool to track channel performance (16k subs) using official YouTube Data API.', 
-    metrics: 'Real-time data visualization, custom filters',
-    image: '/placeholder-images/project-youtube.jpg',
+    title: 'E-Commerce Website', 
+    tech: ['React', 'API', 'Javascript','Bootstrap'], 
+    desc: 'This is E-commerce website , which can Search,Sort,Filter,etc.', 
+    metrics: 'Fast search, sorting, and smooth cart functionality',
+    image: '/ShopAbhi.PNG',
     challenge: 'Handling complex API authentication and large datasets for charting.',
     solution: 'Implemented OAuth flow and optimized data fetching with memoization.',
     results: 'Improved content strategy clarity.',
-    code:''
+    code:'https://github.com/AbhishekGadmale/ShopAbhi.git',
+    link:'https://shopabhi.onrender.com/'
   },
   { 
     id: 4, 
-    title: 'Task Manager App', 
-    tech: ['React', 'Redux', 'LocalStorage'], 
-    desc: 'Simple, state-managed task manager with drag-and-drop functionality and offline sync.', 
-    metrics: 'Highly intuitive UI, minimal dependency footprint',
-    image: '/placeholder-images/project-task.jpg',
+    title: 'Rock-Paper-Scissor Game', 
+    tech: ['Html', 'Css', 'JavaScript'], 
+    desc: 'An Interactive Rock‑Paper‑Scissors game built with HTML, CSS, and JS.', 
+    metrics: 'Lightweight, fast, responsive, with accurate scoring and clear feedback.',
+    image: '/Rock_Paper_Scissor.PNG',
     challenge: 'Maintaining global state consistency across components without prop drilling.',
     solution: 'Utilized Redux Toolkit for centralized state management.',
     results: 'Robust state handling, excellent user feedback.',
-    code:''
+    code:'https://github.com/AbhishekGadmale/Rock--Paper-Scissors.git',
+    link:'https://abhishekgadmale.github.io/Rock--Paper-Scissors/'
   },
   { 
     id: 5, 
     title: 'Weather API App', 
     tech: ['React', 'Axios', 'OpenWeatherMap API'], 
-    desc: 'Location-based weather application featuring daily and five-day forecasts.', 
+    desc: 'Location-based weather application featuring daily  forecasts.', 
     metrics: 'Fast API response, modern animated icons',
     image: '/Weather Api.PNG',
     challenge: 'Handling asynchronous data fetching and error states gracefully.',
     solution: 'Used `useEffect` cleanup function and robust error boundaries.',
     results: 'Reliable data display under varying network conditions.',
-    code:'https://github.com/AbhishekGadmale/Weather-App.git'
+    code:'https://github.com/AbhishekGadmale/Weather-App.git',
+    link:'https://abhishek-portfolio-2.onrender.com/'
   },
   { 
     id: 6, 
-    title: 'Personal Blog Platform', 
-    tech: ['Next.js', 'Markdown', 'Tailwind CSS'], 
-    desc: 'A static-generated blog focused on web development tutorials and Marathi content.', 
-    metrics: 'SEO-optimized, dark/light mode integration',
-    image: '/placeholder-images/project-blog.jpg',
+    title: 'Quiz App', 
+    tech: ['JavaScript', 'Html', 'CSS'], 
+    desc: 'Simple browser-based Quiz App with score tracking, built with HTML, CSS, and JS.', 
+    metrics: 'Lightweight, fast, interactive, responsive, with score tracking.',
+    image: '/Quiz_App.PNG',
     challenge: 'Integrating Markdown rendering with static site generation for performance.',
     solution: 'Used `gray-matter` and `remark` libraries within Next.js SSG functions.',
     results: 'Incredible SEO scores and rapid page loading.',
-    code:''
+    code:'https://github.com/AbhishekGadmale/Quiz-App.git',
+    link:'https://abhishekgadmale.github.io/Quiz-App/'
   },
 ];
 
@@ -108,7 +114,7 @@ const ProjectCard = ({ project }) => {
             <Button variant="outline-primary" size="sm" href={project.code}>
               <FaGithub className="me-1" /> Code
             </Button>
-            <Button variant="outline-secondary" size="sm" href="#">
+            <Button variant="outline-secondary" size="sm" href={project.link}>
               <FaExternalLinkAlt className="me-1" /> Live Demo
             </Button>
             <Button variant="secondary" size="sm" onClick={() => showCaseStudy(project)}>
