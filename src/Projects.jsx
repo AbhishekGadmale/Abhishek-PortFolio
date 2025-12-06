@@ -15,7 +15,7 @@ const projectsData = [
     tech: ['React', 'Bootstrap', 'Framer Motion'], 
     desc: 'The site you are viewing. Built for speed and accessibility (Lighthouse > 90).', 
     metrics: '95+ Lighthouse Score, fully responsive',
-    image: 'public/PortFolio.PNG',
+    image: '/PortFolio.PNG',
     challenge: 'Achieving high Lighthouse scores with heavy animations.',
     solution: 'Implemented lazy loading, image optimization, and Framer Motion view-based rendering.',
     results: 'Sub 1.5s load time on 3G simulation.',

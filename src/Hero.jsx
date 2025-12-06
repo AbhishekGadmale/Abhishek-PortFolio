@@ -39,7 +39,7 @@ const Hero = ({ name }) => {
           <Col md={10} lg={8}>
             <motion.div initial={{ y: -50 }} animate={{ y: 0 }} transition={{ delay: 0.5, type: 'spring' }}>
               <Image 
-                src="src/Images/ProfilePic.png"
+                src="/ProfilePic.png"
                 roundedCircle 
                 className="mb-4 border border-5 border-secondary shadow-lg"
                 style={{ width: '300px', height: '300px', objectFit: 'cover' }}
