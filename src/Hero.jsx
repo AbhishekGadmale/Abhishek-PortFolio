@@ -74,7 +74,7 @@ const Hero = ({ name }) => {
               <Button 
                 variant="outline-light" 
                 size="lg" 
-                href="public/JobApplication.pdf" 
+                href="/Updated Cv Abhishek.pdf" 
                 download
                 className="shadow-lg"
               >

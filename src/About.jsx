@@ -23,7 +23,7 @@ const About = ({ name }) => {
         {/* Photo Column (40% on desktop, stacked on mobile) */}
         <Col lg={5} className="mb-4 mb-lg-0 text-center">
           <Image 
-            src="/placeholder-images/about-photo.jpg" 
+            src="/Demo1.PNG" 
             fluid 
             rounded 
             className="shadow-lg"
@@ -39,10 +39,10 @@ const About = ({ name }) => {
             Hello, I'm Abhishek Gadmale, an ambitious full-stack developer and freelancer hailing from rural Maharashtra, India.
           </p>
           <p className="text-muted">
-            I am currently transitioning into full-stack development from a background in content creation, driven by a passion for scalable e-commerce solutions. My expertise lies in the modern stack: **React.js, JavaScript, HTML/CSS, and Node.js**, acquired through rigorous self-study and courses like the Coursera/Meta program. I prioritize active contribution on **GitHub** and strive for excellence in performance and accessibility.
+            I am currently transitioning into full-stack development from a background in content creation, driven by a passion for scalable e-commerce solutions. My expertise lies in the modern stack: React.js, JavaScript, HTML/CSS, and Node.js, acquired through rigorous self-study and courses like the Coursera/Meta program. I prioritize active contribution on GitHub and strive for excellence in performance and accessibility.
           </p>
           <p className="text-muted">
-            Being **bilingual (Marathi and English), I enjoy building applications that cater to diverse linguistic user bases. My journey involved overcoming procrastination, which has fueled my dedication to mastering complex frontend and backend challenges.
+            Being bilingual (Marathi and English), I enjoy building applications that cater to diverse linguistic user bases. My journey involved overcoming procrastination, which has fueled my dedication to mastering complex frontend and backend challenges.
           </p>
 
           <h4 className="mt-4 text-secondary">My Journey & Timeline</h4>
@@ -51,14 +51,14 @@ const About = ({ name }) => {
               <FaGraduationCap className="me-3 text-primary" size={20} />
               <div>
                 2025: Online Full-Stack Course Completion
-                <p className="small text-muted mb-0">Achieved certification in advanced React and Node development, focusing on MERN stack projects.</p>
+                <p className="small text-muted mb-0">Achieved certification in advanced React development, focusing on MERN stack projects.</p>
               </div>
             </ListGroup.Item>
             <ListGroup.Item className="d-flex align-items-center bg-transparent border-secondary text-light">
               <FaYoutube className="me-3 text-primary" size={20} />
               <div>
-                2024: YouTube Channel Revival
-                <p className="small text-muted mb-0">Revived technical content channel, growing to 16k+ subscribers**, honing communication and instructional skills.</p>
+                2025: E-commerce Website
+                <p className="small text-muted mb-0">Created an E-commerce Platform using React.js . Fully Responsive and Functional. Used advance React Concepts Like LazyLoading,ContextApi,useEffect,etc.</p>
               </div>
             </ListGroup.Item>
           </ListGroup>
