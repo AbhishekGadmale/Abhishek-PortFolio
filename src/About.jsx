@@ -23,7 +23,7 @@ const About = ({ name }) => {
         {/* Photo Column (40% on desktop, stacked on mobile) */}
         <Col lg={5} className="mb-4 mb-lg-0 text-center">
           <Image 
-            src="/Demo1.PNG" 
+            src="public/Demo1.PNG" 
             fluid 
             rounded 
             className="shadow-lg"

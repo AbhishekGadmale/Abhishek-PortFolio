@@ -70,7 +70,7 @@ const App = () => {
             <section id="about" className="py-5"><About name={name} /></section>
             <section id="skills" className="py-5"><Skills /></section>
             <section id="projects" className="py-5"><Projects /></section>
-            <section className="py-5"><Testimonials /></section>
+            {/* <section className="py-5"><Testimonials /></section> */}
             <section id="contact" className="py-5"><Contact /></section>
           </Container>
         </main>

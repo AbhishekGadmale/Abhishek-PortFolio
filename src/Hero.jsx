@@ -39,10 +39,10 @@ const Hero = ({ name }) => {
           <Col md={10} lg={8}>
             <motion.div initial={{ y: -50 }} animate={{ y: 0 }} transition={{ delay: 0.5, type: 'spring' }}>
               <Image 
-                src="/ProfilePic.png"
+                src="public/profile.jpeg"
                 roundedCircle 
                 className="mb-4 border border-5 border-secondary shadow-lg"
-                style={{ width: '300px', height: '300px', objectFit: 'cover' }}
+                style={{ width: '250px', height: '250px', objectFit: 'cover' }}
                 alt={`${name} Profile Photo`}
                 loading="lazy" 
               />
@@ -74,7 +74,7 @@ const Hero = ({ name }) => {
               <Button 
                 variant="outline-light" 
                 size="lg" 
-                href="/Updated Cv Abhishek.pdf" 
+                href="public/ABHISHEK GADMALE cv Latest.pdf" 
                 download
                 className="shadow-lg"
               >

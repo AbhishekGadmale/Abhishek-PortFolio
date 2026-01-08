@@ -93,11 +93,11 @@ const projectsData = [
 const ProjectCard = ({ project }) => {
   return (
     <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true, amount: 0.1 }}>
-      <Card className="project-card h-100 border-0 shadow-lg" style={{ backgroundColor: 'var(--card-bg)' }}>
+      <Card className="project-card  border-0 shadow-lg" style={{ backgroundColor: 'var(--card-bg)', height:"550px" ,borderRadius:"25px" }}>
         <Card.Img 
           variant="top" 
           src={project.image} 
-          style={{ height: '250px', objectFit: 'cover' }} 
+          style={{ height: '250px', objectFit: 'cover', borderTopLeftRadius: "25px", borderTopRightRadius: "25px" }} 
           alt={project.title} 
           loading="lazy"
         />
