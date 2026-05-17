@@ -44,7 +44,7 @@ const projectsData = [
       { name: 'Optimized', value: 1.2 }
     ],
     code:'https://github.com/AbhishekGadmale/Abhishek-PortFolio.git',
-    link:'https://explore-world-3.onrender.com/about'
+    link:'https://abhishek-portfolio-2.onrender.com/'
   },
   { 
     id: 2, 
@@ -80,6 +80,42 @@ const projectsData = [
     code:'https://github.com/AbhishekGadmale/ShopAbhi.git',
     link:'https://shopabhi.onrender.com/'
   },
+  {
+       id: 4,
+         title: 'Servilo',
+         tech: ['React Native', 'Expo', 'React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'Cloudinary'],
+         desc: 'Full-stack service booking and management platform featuring a mobile app for users and a React-based admin panel for shop management.',
+         metrics: 'Real-time chat, location-based services, and secure authentication',
+         image: '/Servilo.PNG',
+         challenge: 'Implementing real-time communication for chat/notifications and coordinating location-based shop discovery across multiple platforms.',
+         solution: 'Built a cross-platform mobile app using React Native/Expo integrated with an Express/MongoDB backend. Utilized Socket.io for real-time bi-directional communication and Cloudinary for media management.',
+        results: 'A unified ecosystem that enables seamless service bookings, real-time user-staff communication, and efficient administrative oversight.',
+        impactData: [
+          { name: 'Cross-platform', value: 100 },
+          { name: 'Real-time Sync', value: 100 }
+        ],
+        code: 'https://github.com/AbhishekGadmale/servilo-backend.git',
+        link: 'https://expo.dev/artifacts/eas/mEJgBcdAMB1HbJknzANQ5A.apk'
+      },
+
+      {
+      id: 4,
+       title: 'Mantra Properties',
+       tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Express', 'Node.js', 'MongoDB', 'Lucide React', 'shadcn/ui'],
+       desc: 'A premium full-stack real estate marketplace featuring high-performance property listings, advanced filtering, and a secure administrative dashboard.',
+       metrics: 'Interactive animations, responsive design, and secure lead management',
+       image: '/hero-bg.jpg',
+       challenge: 'Implementing complex property filtering with high performance and creating a seamless transition between public listings and administrative controls.',
+       solution: 'Leveraged Framer Motion for fluid UI transitions and built a scalable backend using Express/MongoDB with JWT-based authentication for the admin panel.',
+      results: 'A fast, reliable platform that simplifies property discovery for users and streamlines listing management for admins.',
+      impactData: [
+        { name: 'UX Fluidity', value: 100 },
+        { name: 'Admin Control', value: 100 }
+      ],
+      code: 'https://github.com/AbhishekGadmale/real-estate-app.git',
+      link: 'https://real-estate-app-sr0u.onrender.com/'
+    }
+      
 ];
 
 // --- Project Card Component ---
