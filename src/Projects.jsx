@@ -99,7 +99,7 @@ const projectsData = [
       },
 
       {
-      id: 4,
+      id: 5,
        title: 'Mantra Properties',
        tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Express', 'Node.js', 'MongoDB', 'Lucide React', 'shadcn/ui'],
        desc: 'A premium full-stack real estate marketplace featuring high-performance property listings, advanced filtering, and a secure administrative dashboard.',
