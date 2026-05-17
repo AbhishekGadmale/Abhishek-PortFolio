@@ -1,0 +1,485 @@
+/* --- Footer Styling --- */
+.footer-custom {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* --- Contact Form Fixes --- */
+.glass-input {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-main) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.glass-input:focus {
+  background: var(--glass-bg) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.2) !important;
+  color: var(--text-main) !important;
+}
+
+/* --- Social Links --- */
+.social-link {
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-5px);
+  background: var(--glass-bg);
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
+}
+
+/* --- Theme Management --- */
+:root {
+  /* Dark Mode (Default) */
+  --primary-color: #6366f1;
+  --secondary-color: #ec4899;
+  --bg-color: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --mesh-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0, transparent 50%), 
+                   radial-gradient(at 50% 0%, rgba(236, 72, 153, 0.1) 0, transparent 50%), 
+                   radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0, transparent 50%);
+  
+  --bs-body-bg: var(--bg-color);
+  --bs-body-color: var(--text-main);
+  --bs-primary: var(--primary-color);
+  --bs-secondary: var(--secondary-color);
+}
+
+.light-mode {
+  --bg-color: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #475569;   
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --mesh-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0, transparent 50%), 
+                   radial-gradient(at 50% 0%, rgba(236, 72, 153, 0.05) 0, transparent 50%), 
+                   radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0, transparent 50%);
+
+  --bs-body-bg: var(--bg-color);
+  --bs-body-color: var(--text-main);
+}
+
+/* --- Base Styles --- */
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--bg-color);
+  background-image: var(--mesh-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+p, span, li, label, .nav-link, .card-text {
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* --- Specific Visibility Fixes --- */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: var(--text-main) !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.project-card, .skill-card, .testimonial-card {
+  background: var(--card-bg) !important;
+  color: var(--text-main) !important;
+}
+
+.project-card .card-title, 
+.skill-card .card-title {
+  color: var(--text-main) !important;
+}
+
+.modal-content {
+  color: var(--text-main);
+}
+
+/* Ensure labels in contact form are visible */
+.form-label, label {
+  color: var(--text-main) !important;
+}
+
+.form-control {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+}
+
+.form-control:focus {
+  background-color: var(--glass-bg);
+  color: var(--text-main);
+  border-color: var(--primary-color);
+}
+
+/* --- Hero Section Enhancements --- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-subtitle {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Navbar Customization --- */
+.navbar-custom {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: var(--glass-bg) !important;
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* --- Project Card Overlays --- */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .object-fit-cover {
+  transform: scale(1.1);
+}
+
+.transition-transform {
+  transition: transform 0.5s ease;
+}
+
+/* --- Project Modal --- */
+.project-modal-content {
+  background: transparent !important;
+  border: none !important;
+}
+
+.project-modal-content .bg-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.project-modal-content .bg-dark {
+  background: var(--bg-dark-start) !important;
+}
+
+@media (max-width: 991.98px) {
+  .project-modal-content .p-5 {
+    padding: 2rem !important;
+  }
+}
+
+/* --- Button Styling --- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  padding: 0.6rem 1.5rem !important;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+}
+
+/* --- Hero Section Enhancements --- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--primary-color);
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-color);
+  bottom: -50px;
+  left: -50px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.2rem;
+}
+
+.profile-frame {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  margin: 0 auto;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 10px;
+  animation: morph 8s ease-in-out infinite;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+.floating-badge {
+  position: absolute;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--text-light);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.badge-react {
+  top: 10%;
+  right: -20px;
+}
+
+.badge-node {
+  bottom: 20%;
+  left: -30px;
+}
+
+.blink-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .display-2 {
+    font-size: 3rem !important;
+  }
+  
+  .hero-section {
+    text-align: center !important;
+    padding-top: 100px !important;
+  }
+  
+  .hero-section .text-start {
+    text-align: center !important;
+  }
+  
+  .hero-section .d-flex {
+    justify-content: center !important;
+  }
+  
+  .profile-frame {
+    width: 280px;
+    height: 280px;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .display-2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .section-divider {
+    margin: 1.5rem 0;
+  }
+  
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .project-card, .skill-card {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-collapse {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--glass-border);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .display-2 {
+    font-size: 2rem !important;
+  }
+  
+  .profile-frame {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .floating-badge {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* --- Project Modal Mobile Fixes --- */
+@media (max-width: 991.98px) {
+  .project-modal-content .col-lg-5 {
+    padding: 3rem 2rem !important;
+  }
+  
+  .project-modal-content .col-lg-7 {
+    padding: 2rem !important;
+  }
+}
+
+/* --- Masonry Fix for Mobile --- */
+.masonry-col {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-col {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry-col {
+    column-count: 3;
+  }
+}
+
+.masonry-col > * {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Global Transitions --- */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
