@@ -58,7 +58,7 @@ const Hero = ({ name }) => {
                 <Button 
                   variant="outline-primary" 
                   size="lg" 
-                  href="/ABHISHEK GADMALE cv Latest.pdf" 
+                  href="ABHISHEK GADMALE Resume 9.pdf" 
                   download 
                   className="rounded-pill px-4 py-3"
                 >
